@@ -1,0 +1,9 @@
+<ul class="nav nav-pills">
+    <template ngFor let-route [ngForOf]="this.router.config">
+        <li role="presentation" routerLinkActive="active" *ngIf="route.path !== ''">
+            <a routerLink="{{'/' + route.path}}">{{route.data.title}}</a>
+        </li>
+    </template>
+</ul>
+
+<router-outlet></router-outlet>
