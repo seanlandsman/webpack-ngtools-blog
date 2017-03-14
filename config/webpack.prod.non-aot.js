@@ -66,8 +66,3 @@ module.exports = {
         })
     ]
 };
-// JIT 15.2mb, 3.36s
-// Prod 5.9mb, 1.78s
-// Prod Minified 2.4mb, 1.81s
-// AOT 6.9MB 1.39
-// AOT Minified 2.5MB 1.32
