@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-
 const helpers = require('./helpers');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -47,18 +46,18 @@ module.exports = {
             template: 'config/index.html'
         }),
 
-        // new webpack.optimize.UglifyJsPlugin({
-        //     beautify: false,
-        //     comments: false,
-        //     compress: {
-        //         screw_ie8: true,
-        //         warnings: false
-        //     },
-        //     mangle: {
-        //         keep_fnames: true,
-        //         screw_i8: true
-        //     }
-        // }),
+        new webpack.optimize.UglifyJsPlugin({
+            beautify: false,
+            comments: false,
+            compress: {
+                screw_ie8: true,
+                warnings: false
+            },
+            mangle: {
+                keep_fnames: true,
+                screw_i8: true
+            }
+        }),
 
         new webpack.DefinePlugin({
             'process.env': {

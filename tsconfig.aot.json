@@ -1,46 +1,23 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "es2015",
+    "module": "commonjs",
     "moduleResolution": "node",
+    "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "pretty": false,
-    "sourceMap": true,
-    "noEmitHelpers": true,
-    "strictNullChecks": false,
-    "outDir": "dist",
-    "rootDir": "./app",
-    "lib": [
-      "dom",
-      "es2015"
-    ],
-    "types": [
-      "node",
-      "source-map",
-      "uglify-js",
-      "webpack"
-    ]
+    "removeComments": false,
+    "noImplicitAny": false,
+    "lib": ["dom","es2015"]
   },
+  "compileOnSave": true,
   "exclude": [
-    "node_modules",
-    "dist",
+    "node_modules/*",
     "aot/",
-    "src/boot-aot.ts"
+    "app/boot-aot.ts"
   ],
-  "awesomeTypescriptLoaderOptions": {
-    "useWebpackText": true,
-    "forkChecker": true,
-    "useCache": true
-  },
   "angularCompilerOptions": {
     "genDir": "aot/",
     "skipMetadataEmit": true
-  },
-  "compileOnSave": false,
-  "buildOnSave": false,
-  "atom": {
-    "rewriteTsconfig": false
   }
 }
