@@ -6,13 +6,10 @@
     "clean": "rimraf dist && rimraf app/*.js* && rimraf app/*.map",
     "clean-aot": "rimraf dist/aot/*",
     "clean-non-aot": "rimraf dist/non-aot/*",
-
     "start:aot": "webpack-dev-server --config config/webpack.prod.aot.js --watch --profile --progress",
     "build:aot": "npm run clean-aot && webpack --config config/webpack.prod.aot.js --progress --profile --bail",
-
     "start:non-aot": "webpack-dev-server --config config/webpack.prod.non-aot.js --watch --profile --progress",
     "build:non-aot": "npm run clean-non-aot && webpack --config config/webpack.prod.non-aot.js --progress --profile --bail",
-
     "start": "webpack-dev-server --config config/webpack.dev.js --inline --progress --port 8080"
   },
   "repository": {
@@ -37,11 +34,12 @@
     "@angular/router": "3.4.x",
     "rxjs": "5.0.x",
     "zone.js": "0.7.x",
-    "core-js": "2.4.x"
+    "core-js": "2.4.x",
+    "enhanced-resolve": "3.3.0"
   },
   "devDependencies": {
     "@angular/compiler-cli": "2.4.x",
-    "@ngtools/webpack": "1.2.8",
+    "@ngtools/webpack": "1.6.2",
     "@types/node": "6.0.45",
     "angular2-template-loader": "0.6.x",
     "awesome-typescript-loader": "3.0.x",
@@ -51,11 +49,10 @@
     "html-webpack-plugin": "2.28.x",
     "extract-text-webpack-plugin": "2.0.x",
     "webdriver-manager": "10.2.5",
-    "webpack": "2.2.x",
+    "webpack": "3.3.x",
     "webpack-dev-server": "2.4.x",
     "typescript": "2.2.x",
     "rimraf": "2.5.x",
     "url-loader": "0.5.7"
   }
 }
-
